@@ -2,19 +2,16 @@ def list_sum(myList):
 
     mysum = 0
     if not isinstance(myList,list):
-        raise TypeError ('invalid input')
+        raise TypeError ('Invalid input')
+    
     for i in myList:
-        if not (isinstance (i,int) or isinstance (i,list)):
-            raise TypeError ('expected list or number')
+        
         if isinstance(i, int):
             mysum += i
         else:
             sub = list_sum(i)
             mysum += sub
     return mysum
-
-
-# print(list_sum("welcome"))
 
 
 def power_num(num, power):
